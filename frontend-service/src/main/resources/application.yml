@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: frontend-service
+  cloud:
+    discovery:
+      enabled: true
+    services:
+      registrationMethod: direct
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+security:
+  basic:
+    enabled: false

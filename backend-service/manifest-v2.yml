@@ -1,0 +1,17 @@
+---
+applications:
+- name: backend-service-v2
+  buildpacks:
+    - java_buildpack_offline
+  routes:
+    - route: backend-service-v2.apps.internal
+  memory: 1G
+  instances: 1
+  path: ./target/backend-service-0.0.1-SNAPSHOT.jar
+  services:
+    - registry
+  env:
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+    SPRING_PROFILES_ACTIVE: cloud
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }}'
+    BACKEND_SERVICE_VERSION: 'v2'

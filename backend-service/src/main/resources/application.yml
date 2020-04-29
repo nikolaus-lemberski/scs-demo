@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: backend-service
+  cloud:
+    discovery:
+      enabled: true
+    services:
+      registrationMethod: direct
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    restart:
+      enabled: true
+
+security:
+  basic:
+    enabled: false
+
+
+#eureka:
+#  instance:
+#    initial-status: OUT_OF_SERVICE
