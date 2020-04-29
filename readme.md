@@ -4,10 +4,10 @@ Demo for Service Registy, Client side load balancing (Spring Boot, Feign Client)
 
 ## Important cf commands
 
-```cf push -f <manifestfile>```
+```cf push -f <manifestfile>
 
-```cf create-service p.service-registry standard <servicename>
-cf share-service <servicename> -s <otherspace>```
+cf create-service p.service-registry standard <servicename>
+cf share-service <servicename> -s <otherspace>
 
-```cf add-network-policy frontend-service --destination-app backend-service --protocol tcp --port 8080
+cf add-network-policy frontend-service --destination-app backend-service --protocol tcp --port 8080
 cf add-network-policy <app> --destination-app <target> --protocol tcp --port 8080 -s <space>```
