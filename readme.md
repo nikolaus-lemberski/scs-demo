@@ -27,6 +27,6 @@ Demo for Service Registy, Client side load balancing (Spring Boot, Feign Client)
 
 Now you have explored how to do canary releases, client side load balancing, service registry and working with different spaces.
 
-If your clients cannot handle other services that are not available (connection refused because network policy is missing), you can start new versions with status "out of service" at Service Registry, then test the new version, then add network policy, then change the status of the new version to "up". See application.yml of backend-service how to set initial status to "out of service".
+**If your clients cannot handle other services that are not available (connection refused because network policy is missing), you can start new versions with status "out of service" at Service Registry**, then test the new version, then add network policy, then change the status of the new version to "up". See application.yml of backend-service how to set initial status to "out of service".
 
 
