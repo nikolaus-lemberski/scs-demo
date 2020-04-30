@@ -13,7 +13,7 @@ Demo for Service Registy, Client side load balancing (Spring Boot, Feign Client)
 5. Create service registry from marketplace `cf create-service p.service-registry standard registry`
 6. Install frontend-service and backend-service `cf push`
 7. Add network policy for interal routing `cf add-network-policy frontend-service --destination-app backend-service --protocol tcp --port 8080`
-8. Call frontend-service on endpoint /backend to get a message from backend. If something goes wrong and circuit breaker takes over, check logs and service registry dashboard.
+8. Call frontend-service to get a Hello message from frontend-service. Call <frontend-service-route-url>/backend to get a Hello message from backend. If something goes wrong and circuit breaker takes over, check logs and service registry dashboard.
 9. Play around with it, stop backend-service to see circuit breaker in action, scale backend-service up to see client side load balancing in action.
 10. Install new version of backend-service; go into backend-service dir and run `cf push -f manifest-v2.yml`
 11. Check frontend-service and service registry dashboard: frontend-service cannot access backend-service-v2, but backend-service-v2 is registered at service registry
