@@ -6,7 +6,7 @@ Demo for Service Registy, Client side load balancing (Spring Boot, Feign Client)
 
 ## How to run the demo
 
-1. Adjust the routes in `manifest.yml` files to your TAS / Cloud Foundry installation
+1. Adjust the public route of frontend-service in `manifest.yml` files to your TAS / Cloud Foundry installation
 2. Build the jars with maven `mvn clean install`
 3. Create a space `cf create-space -s demo1`
 4. Switch to space `cf target -s demo1`
