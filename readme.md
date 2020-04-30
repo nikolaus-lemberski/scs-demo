@@ -23,7 +23,7 @@ Demo for Service Registy, Client side load balancing (Spring Boot, Feign Client)
 17. Install backend-service v3 in space demo2 `cf push -f manifest-v3.yml`
 18. Check service registry, backend-service-v3 should be registered, frontend-service cannot reach backend-service-v3 (network policy missing).
 19. Switch to space demo1 `cf target -s demo1`
-20. Add network policy `cf add-network-policy <app> --destination-app <target> --protocol tcp --port 8080 -s demo2`
+20. Add network policy `cf add-network-policy frontend-service --destination-app backend-service-v3 --protocol tcp --port 8080 -s demo2`
 
 Now you have explored how to do canary releases, client side load balancing, service registry and working with different spaces.
 
