@@ -14,3 +14,7 @@ management:
     web:
       exposure:
         include: "*"
+
+security:
+  basic:
+    enabled: false
